@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Newsreader, JetBrains_Mono } from 'next/font/google'
 import SmoothScroll from '@/components/SmoothScroll'
 import './globals.css'
+import { ReactNode } from 'react'
 
 // Display — headings, /engineering wordmark. Variable font, weight set per use.
 const bricolage = Bricolage_Grotesque({
@@ -39,7 +40,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+interface LayoutProps {
+  children: ReactNode
+}
+
+
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
       lang="en"

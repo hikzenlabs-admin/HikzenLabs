@@ -34,8 +34,8 @@ export const contact = {
   email: 'hello@hikzenlabs.com',
   // Placeholder — replace with the HikzenLabs WhatsApp Business number
   // (digits only, country code first, no leading +) before launch.
-  whatsappNumber: '911234567890',
-  whatsappMessage: "Hi! I'd like to talk about a project.",
+  whatsappNumber: '917889912123',
+  whatsappMessage: "Hi HikzenLabs! I'd like to talk about a project.",
   // Placeholder — replace with the real Cal.com booking link before launch.
   calLink: 'https://cal.com/hikzenlabs',
 } as const
