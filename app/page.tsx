@@ -10,6 +10,7 @@ import About from '@/components/About'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import { homeHero } from '@/content/site'
+import WhatWeDo from '@/components/WhatWeDo'
 
 export const metadata: Metadata = {
   title: 'HikzenLabs — Websites, design and photography in Kashmir',
@@ -29,6 +30,7 @@ export default function Home() {
       <main>
         <Hero variant="home" />
         <Showcase />
+        <WhatWeDo />
         <Work />
         <Services />
         <Pricing />
