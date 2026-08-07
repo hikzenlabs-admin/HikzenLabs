@@ -1,26 +1,41 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* Design tokens — BRAND.md §1. Monochrome, no accent colour anywhere.
+   This is the single source of truth: every colour in the app references
+   one of these custom properties, never a literal hex value. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #fbfaf6;
+  --paper-2: #f2efe7;
+  --ink: #141917;
+  --ink-mut: #5a615c;
+  --line: #dfd9cc;
+
+  /* Not one of the five brand tokens, but still centralized here rather
+     than hardcoded per-component — BRAND.md §2's primary-button hover fill. */
+  --ink-hover: #2a302c;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-mut: var(--ink-mut);
+  --color-line: var(--line);
+  --color-ink-hover: var(--ink-hover);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Accessibility floor — BUILD.md §10 / BRAND.md §2: visible focus rings,
+   2px ink, on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
